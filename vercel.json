@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "Back_PricePrediction",
+            "use": "@vercel/python3"
+        }
+    ],
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest": "Back_PricePrediction/main_backend.py"
+        }
+    ]
+}
