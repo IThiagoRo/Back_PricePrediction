@@ -60,7 +60,7 @@ async def index():
 async def predict(asset: str):
     # Descargar los últimos 60 días de precios
     last_60_days = get_last_60_days(asset)
-    
+    print(len(last_60_days))
     # Validar que hayamos obtenido exactamente 60 días de precios
     if len(last_60_days) != 60:
         return {"error": "No se pudieron obtener exactamente 60 días de precios"}
