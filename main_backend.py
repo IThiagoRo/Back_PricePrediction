@@ -67,7 +67,7 @@ async def predict(asset: str):
 
     last_60_days_scaled = sc.fit_transform(last_60_days.reshape(-1, 1))
 
-    last_60_days_scaled = np.reshape(last_60_days_scaled, (1, 60, 1))
+    last_60_days_scaled = np.reshape(last_60_days_scaled, (1, len(last_60_days), 1))
 
     prediction = MODEL.predict(last_60_days_scaled)
 
